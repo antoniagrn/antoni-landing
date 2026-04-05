@@ -43,12 +43,18 @@
       height: auto;
     }
 
+    /* ===================== */
+    /* PAGE LAYOUT */
+    /* ===================== */
     .page {
-      padding: 2rem 2rem 3rem;
-      max-width: 1280px;
+      padding: 2rem 2.5rem 3rem;
+      max-width: 1400px; /* breiter */
       margin: 0 auto;
     }
 
+    /* ===================== */
+    /* HEADER */
+    /* ===================== */
     .header {
       display: flex;
       justify-content: space-between;
@@ -73,11 +79,14 @@
       margin-bottom: 0.05rem;
     }
 
+    /* ===================== */
+    /* IMAGES */
+    /* ===================== */
     .cover {
       margin-top: 1rem;
       margin-bottom: 1rem;
       width: 100%;
-      max-width: 820px;
+      max-width: 880px; /* größer */
       margin-left: auto;
       margin-right: auto;
     }
@@ -86,12 +95,15 @@
       margin-top: 0.8rem;
       margin-bottom: 1.5rem;
       width: 100%;
-      max-width: 820px;
+      max-width: 880px; /* gleich groß */
       margin-left: auto;
       margin-right: auto;
       opacity: 0.9;
     }
 
+    /* ===================== */
+    /* CONTACT */
+    /* ===================== */
     .contact-block {
       text-align: center;
       font-size: 0.9rem;
@@ -101,7 +113,7 @@
 
     .contact-title {
       margin-bottom: 0.6rem;
-      font-weight: 700; /* jetzt fett */
+      font-weight: 700;
       letter-spacing: 0.06em;
     }
 
@@ -109,6 +121,9 @@
       margin-bottom: 0.3rem;
     }
 
+    /* ===================== */
+    /* MOBILE */
+    /* ===================== */
     @media (max-width: 700px) {
       .page {
         padding: 1rem 1rem 2rem;
@@ -133,6 +148,7 @@
 <body>
   <main class="page">
 
+    <!-- HEADER -->
     <div class="header">
       <div class="logo-text">ANTONÍ</div>
 
@@ -160,10 +176,13 @@
       </div>
     </div>
 
+    <!-- COVER -->
     <img class="cover" src="Albumcover_Zeynep_Ozkanca.jpg" alt="Album Cover" />
 
+    <!-- VINYL -->
     <img class="vinyl" src="vinyl_back.png" alt="Vinyl back" />
 
+    <!-- CONTACT -->
     <div class="contact-block">
       <div class="contact-title">Contact</div>
 
