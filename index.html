@@ -48,13 +48,12 @@
     .page {
       min-height: 100vh;
       padding: 2rem;
-      background: var(--orange);
     }
 
     .layout {
       position: relative;
       width: min(1280px, 100%);
-      min-height: 860px;
+      min-height: 90vh;
       margin: 0 auto;
     }
 
@@ -62,159 +61,138 @@
       position: absolute;
     }
 
-    /* Tabs fake transparency */
-    .tab {
-      mix-blend-mode: multiply;
-      filter: contrast(1.1) brightness(0.95);
+    /* ===================== */
+    /* ZENTRALES ALBUM COVER */
+    /* ===================== */
+    .cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: clamp(420px, 55vw, 720px);
+
+      z-index: 1;
     }
 
+    /* ===================== */
     /* LOGO */
+    /* ===================== */
     .logo-tab {
-      top: 1.2rem;
-      left: 0.4rem;
-      width: clamp(200px, 17vw, 300px);
-      z-index: 10;
+      top: 1rem;
+      left: 1rem;
+      width: clamp(180px, 14vw, 260px);
+
       mix-blend-mode: multiply;
       filter: contrast(1.2) brightness(0.9);
-    }
 
-    /* MENU */
-    .top-links {
-      position: absolute;
-      top: 1.1rem;
-      right: 0.5rem;
-      z-index: 20;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0.15rem;
-      font-size: 0.9rem;
-      line-height: 1.1;
-      text-align: right;
-    }
-
-    .release-title {
-      margin-bottom: 0.2rem;
-    }
-
-    /* LIVE */
-    .live-block {
-      position: absolute;
-      top: 6.2rem;
-      right: 0.5rem;
-      width: 260px;
-      z-index: 7;
-      text-align: right;
-      font-size: 0.9rem;
-      line-height: 1.4;
-    }
-
-    .live-block .title {
-      margin: 0.4rem 0 0.3rem;
-    }
-
-    /* GRAUES BILD */
-    .portrait-main {
-      top: 9.8rem;
-      left: 5rem;
-      width: clamp(240px, 24vw, 360px);
-      z-index: 2;
-    }
-
-    /* ROTES BILD */
-    .portrait-small {
-      top: 9.5rem;
-      right: 4rem;
-      width: clamp(420px, 34vw, 560px);
       z-index: 5;
     }
 
-    /* CONTACT */
+    /* ===================== */
+    /* MENU + LINKS */
+    /* ===================== */
+    .top-links {
+      position: absolute;
+      top: 1.2rem;
+      right: 1rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      gap: 0.2rem;
+      font-size: 0.9rem;
+      text-align: right;
+
+      z-index: 5;
+    }
+
+    /* ===================== */
+    /* LIVE */
+    /* ===================== */
+    .live-block {
+      position: absolute;
+      top: 6.5rem;
+      right: 1rem;
+
+      width: 260px;
+
+      text-align: right;
+      font-size: 0.9rem;
+      line-height: 1.4;
+
+      z-index: 5;
+    }
+
+    .live-block .title {
+      margin-bottom: 0.4rem;
+    }
+
+    /* ===================== */
+    /* CONTACT UNTEN */
+    /* ===================== */
     .contact-block {
       position: absolute;
-      top: 27rem;
+      bottom: 2rem;
       left: 50%;
+
       transform: translateX(-50%);
-      width: 300px;
-      z-index: 8;
+
       text-align: center;
-      font-size: 0.93rem;
+      font-size: 0.9rem;
       line-height: 1.5;
+
+      z-index: 5;
     }
 
     .contact-tab {
       width: 200px;
-      margin-bottom: 0.7rem;
+      margin: 0 auto 0.6rem;
+
       mix-blend-mode: multiply;
       filter: contrast(1.15) brightness(0.95);
     }
 
     .contact-block .row {
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
 
-    .footer-note {
-      position: absolute;
-      left: 0;
-      bottom: -1.5rem;
-      font-size: 0.63rem;
-      letter-spacing: 0.05em;
-      opacity: 0.65;
-    }
-
+    /* ===================== */
     /* MOBILE */
-    @media (max-width: 980px) {
-      .page {
-        padding: 1rem;
-      }
+    /* ===================== */
+    @media (max-width: 900px) {
 
       .layout {
-        min-height: auto;
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
       }
 
+      .cover,
       .logo-tab,
       .top-links,
-      .portrait-main,
-      .portrait-small,
-      .contact-block,
       .live-block,
-      .footer-note {
+      .contact-block {
         position: static;
         transform: none;
-        width: auto;
+        width: 100%;
       }
 
-      .logo-tab {
-        width: 180px;
+      .cover {
+        max-width: 520px;
+        margin: 0 auto;
       }
 
-      .top-links {
+      .top-links,
+      .live-block,
+      .contact-block {
+        text-align: left;
         align-items: flex-start;
-        text-align: left;
-      }
-
-      .portrait-main,
-      .portrait-small {
-        max-width: 520px;
-      }
-
-      .contact-block,
-      .live-block {
-        max-width: 520px;
-        text-align: left;
-      }
-
-      .contact-tab {
-        margin: 0 0 0.9rem 0;
-      }
-
-      .footer-note {
-        margin-top: 1rem;
       }
     }
+
   </style>
 </head>
 
@@ -222,12 +200,15 @@
   <main class="page">
     <section class="layout">
 
+      <!-- ALBUM COVER -->
+      <img class="cover" src="Albumcover_Zeynep_Ozkanca.jpg" alt="Album Cover" />
+
       <!-- LOGO -->
-      <img class="cutout logo-tab" src="antoni.jpg" alt="Antoni logo" />
+      <img class="logo-tab" src="antoni.jpg" alt="Antoni logo" />
 
       <!-- MENU -->
       <div class="top-links">
-        <span class="release-title">Holding Tight Lightly</span>
+        <span>Holding Tight Lightly</span>
         <a href="https://antoni-music.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>
         <a href="https://www.youtube.com/channel/UCPyQuCURbptinYXZKnuP1zA" target="_blank" rel="noreferrer">Videos</a>
       </div>
@@ -235,26 +216,17 @@
       <!-- LIVE -->
       <div class="live-block">
         <div class="title">Live</div>
-        <div>07.05. <a href="https://www.feinkostlampe.de/" target="_blank" rel="noreferrer">Hannover Feinkost Lampe</a></div>
-        <div>03.07. <a href="https://www.rudolstadt-festival.de/startseite.html" target="_blank" rel="noreferrer">Rudolstadt Festival</a></div>
-        <div>31.07. <a href="https://www.borwaerk.org/" target="_blank" rel="noreferrer">Festival L*abore</a></div>
+        <div>07.05. <a href="https://www.feinkostlampe.de/" target="_blank">Hannover Feinkost Lampe</a></div>
+        <div>03.07. <a href="https://www.rudolstadt-festival.de/startseite.html" target="_blank">Rudolstadt Festival</a></div>
+        <div>31.07. <a href="https://www.borwaerk.org/" target="_blank">Festival L*abore</a></div>
       </div>
-
-      <!-- IMAGES -->
-      <img class="cutout portrait-main" src="closeup.jpg" alt="Antoni portrait" />
-      <img class="cutout portrait-small" src="Zeynep_Ozkanca.jpg" alt="Antoni portrait red" />
 
       <!-- CONTACT -->
       <div class="contact-block">
         <img class="contact-tab" src="contact.jpg" alt="Contact" />
-        <div class="row">Label - <a href="https://www.listenrecords-shop.com/produkte" target="_blank" rel="noreferrer">Listenrecords</a></div>
-        <div class="row">Booking - <a href="https://cabinartists.com/" target="_blank" rel="noreferrer">Cabin Artists</a></div>
-        <div class="row">Publisher - <a href="https://www.kicktheflame.de/de" target="_blank" rel="noreferrer">Kick The Flame</a></div>
-      </div>
-
-      <!-- FOOTER -->
-      <div class="footer-note">
-        if the white paper edges of the tabs show too much, remove the background in a png editor and replace the jpg files later.
+        <div class="row">Label - <a href="https://www.listenrecords-shop.com/produkte" target="_blank">Listenrecords</a></div>
+        <div class="row">Booking - <a href="https://cabinartists.com/" target="_blank">Cabin Artists</a></div>
+        <div class="row">Publisher - <a href="https://www.kicktheflame.de/de" target="_blank">Kick The Flame</a></div>
       </div>
 
     </section>
