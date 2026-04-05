@@ -8,7 +8,7 @@
     :root {
       --orange: #db663f;
       --text: #111111;
-      --muted: rgba(17, 17, 17, 0.75);
+      --muted: rgba(17, 17, 17, 0.78);
     }
 
     * {
@@ -42,84 +42,121 @@
     .page {
       position: relative;
       min-height: 100vh;
-      padding: 3rem 2rem 4rem;
+      padding: 2rem 2rem 4rem;
       background: var(--orange);
-    }
-
-    .wordmark {
-      position: absolute;
-      top: 2.3rem;
-      left: 2rem;
-      font-size: clamp(1.8rem, 4vw, 3.25rem);
-      line-height: 0.95;
-      font-weight: 500;
-      z-index: 10;
-    }
-
-    .meta {
-      position: absolute;
-      top: 2.6rem;
-      right: 2rem;
-      max-width: 11rem;
-      font-size: 0.72rem;
-      line-height: 1.35;
-      text-align: right;
-      z-index: 10;
     }
 
     .layout {
       position: relative;
-      width: min(1200px, 100%);
+      width: min(1260px, 100%);
       margin: 0 auto;
-      min-height: calc(100vh - 7rem);
+      min-height: calc(100vh - 6rem);
     }
 
     .hero {
       position: relative;
-      padding-top: 7.5rem;
-      min-height: 900px;
+      min-height: 960px;
     }
 
     .cutout {
       position: absolute;
       background: transparent;
-      box-shadow: none;
       border: 0;
+      box-shadow: none;
+    }
+
+    .ghost {
+      mix-blend-mode: multiply;
+    }
+
+    .logo-tab {
+      position: absolute;
+      left: 1.5rem;
+      top: 1.25rem;
+      width: min(20vw, 220px);
+      z-index: 10;
+    }
+
+    .top-links {
+      position: absolute;
+      top: 1.7rem;
+      right: 1.75rem;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.2rem;
+      max-width: 34rem;
+      font-size: 0.82rem;
+      line-height: 1.2;
+      text-align: right;
+    }
+
+    .top-links a,
+    .top-links span {
+      display: inline-block;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 0.1rem;
+    }
+
+    .top-links a:hover {
+      border-color: var(--text);
     }
 
     .portrait-main {
-      width: min(43vw, 520px);
+      width: min(43vw, 540px);
       left: 9%;
-      top: 9rem;
+      top: 8.5rem;
       z-index: 2;
-      mix-blend-mode: multiply;
     }
 
     .texture {
-      width: min(25vw, 290px);
-      left: 3%;
-      top: 35rem;
+      width: min(26vw, 300px);
+      left: 5%;
+      top: 36.5rem;
       z-index: 1;
-      mix-blend-mode: multiply;
-      opacity: 0.9;
+      opacity: 0.92;
     }
 
     .portrait-small {
       width: min(19vw, 220px);
       right: 16%;
-      top: 7rem;
+      top: 8.3rem;
       z-index: 3;
-      mix-blend-mode: multiply;
+    }
+
+    .release-links {
+      position: absolute;
+      left: 37%;
+      top: 20rem;
+      z-index: 6;
+      display: grid;
+      gap: 0.45rem;
+      width: min(23vw, 280px);
+    }
+
+    .release-links a {
+      display: inline-block;
+      width: fit-content;
+      font-size: clamp(1rem, 1.45vw, 1.35rem);
+      line-height: 1;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .release-links a:hover {
+      border-color: var(--text);
+      transform: translateX(4px);
     }
 
     .trackblock {
       position: absolute;
-      right: 3%;
-      top: 22rem;
-      width: min(30vw, 380px);
+      right: 4%;
+      top: 21rem;
+      width: min(28vw, 340px);
       z-index: 4;
-      font-size: clamp(0.8rem, 1.15vw, 1rem);
-      line-height: 1.2;
+      font-size: clamp(0.8rem, 1.1vw, 0.98rem);
+      line-height: 1.18;
     }
 
     .trackblock .title {
@@ -127,103 +164,115 @@
       margin-bottom: 0.45rem;
       font-size: 0.76em;
       letter-spacing: 0.12em;
-      opacity: 0.8;
+      opacity: 0.82;
     }
 
-    .links {
+    .live-block {
       position: absolute;
       left: 34%;
-      top: 38rem;
-      z-index: 5;
-      display: grid;
-      gap: 0.45rem;
-      width: min(32vw, 360px);
+      top: 34rem;
+      width: min(28vw, 320px);
+      z-index: 8;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
 
-    .links a {
-      display: inline-block;
-      width: fit-content;
-      font-size: clamp(1rem, 1.5vw, 1.35rem);
-      line-height: 1;
+    .live-block .title {
+      margin-bottom: 0.5rem;
+    }
+
+    .live-block a {
       border-bottom: 1px solid transparent;
-      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .links a:hover {
+    .live-block a:hover {
       border-color: var(--text);
-      transform: translateX(4px);
     }
 
-    .note {
+    .contact-block {
       position: absolute;
-      left: 34%;
-      top: 32.5rem;
-      z-index: 5;
-      font-size: 0.72rem;
-      line-height: 1.35;
-      max-width: 15rem;
-      color: var(--muted);
+      left: 36.5%;
+      top: 42rem;
+      width: min(30vw, 350px);
+      z-index: 7;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .contact-tab {
+      width: min(13vw, 160px);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-block .row {
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-block .row a {
+      border-bottom: 1px solid transparent;
+    }
+
+    .contact-block .row a:hover {
+      border-color: var(--text);
     }
 
     .footer-note {
       position: absolute;
       left: 2rem;
-      bottom: 1.5rem;
-      font-size: 0.68rem;
+      bottom: 1.2rem;
+      font-size: 0.66rem;
       letter-spacing: 0.08em;
       opacity: 0.7;
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .page {
-        padding: 1.5rem 1rem 5rem;
-      }
-
-      .wordmark,
-      .meta,
-      .trackblock,
-      .note,
-      .links,
-      .portrait-main,
-      .texture,
-      .portrait-small {
-        position: static;
+        padding: 1rem 1rem 5rem;
       }
 
       .hero {
         display: grid;
         gap: 1rem;
-        padding-top: 4rem;
         min-height: auto;
+        padding-top: 5.25rem;
       }
 
-      .wordmark {
-        margin-bottom: 0.35rem;
-      }
-
-      .meta {
-        max-width: none;
-        text-align: left;
-        margin-bottom: 1rem;
-      }
-
+      .logo-tab,
+      .top-links,
       .portrait-main,
       .texture,
       .portrait-small,
+      .release-links,
       .trackblock,
-      .links,
-      .note {
-        width: 100%;
+      .newsletter-tab,
+      .contact-block,
+      .footer-note {
+        position: static;
       }
 
+      .logo-tab,
+      .newsletter-tab,
+      .contact-tab,
       .portrait-main,
-      .texture,
-      .portrait-small {
+      .portrait-small,
+      .texture {
+        width: 100%;
         max-width: 420px;
       }
 
-      .links {
-        gap: 0.65rem;
+      .top-links {
+        display: grid;
+        gap: 0.3rem;
+        max-width: none;
+        margin-bottom: 1rem;
+        text-align: left;
+        justify-content: start;
+      }
+
+      .release-links,
+      .trackblock,
+      .contact-block {
+        width: 100%;
       }
 
       .footer-note {
@@ -235,49 +284,43 @@
 </head>
 <body>
   <main class="page">
-    <div class="wordmark">ANTONI</div>
-    <div class="meta">
-      Holding Tight Lightly<br />
-      music / visuals / newsletter
-    </div>
-
     <section class="layout hero">
-      <img class="cutout portrait-main" src="closeup_small.jpg" alt="Antoni portrait in red light" />
+      <img class="cutout logo-tab ghost" src="antoni.jpg" alt="Antoni handwritten logo" />
 
-      <img class="cutout texture" src="Bildschirmfoto 2026-04-05 um 11.52.22.png" alt="Abstract texture" />
-
-      <img class="cutout portrait-small" src="Bildschirmfoto 2026-04-05 um 11.43.40.png" alt="Antoni monochrome portrait" />
-
-      <div class="note">
-        one-page landing page with transparent-looking floating elements, inspired by the vinyl layout.
+      <div class="top-links">
+        <span>Holding Tight Lightly</span>
+        <a href="https://antoni-music.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>
+        <a href="https://www.youtube.com/channel/UCPyQuCURbptinYXZKnuP1zA" target="_blank" rel="noreferrer">Videos</a>
+        <a href="https://sonokraft.lnk.to/HoldingTightLightly" target="_blank" rel="noreferrer">Live</a>
+        <div class="live-block">
+        <div class="title">Live:</div>
+        <div>07.05. <a href="https://www.feinkostlampe.de/" target="_blank">Hannover Feinkost Lampe</a></div>
+        <div>03.07. <a href="https://www.rudolstadt-festival.de/startseite.html" target="_blank">Rudolstadt Festival</a></div>
+        <div>31.07. <a href="https://www.borwaerk.org/" target="_blank">Festival L*abore</a></div>
+      </div>
       </div>
 
-      <nav class="links" aria-label="Links">
-        <a href="https://antoni-music.bandcamp.com/" target="_blank" rel="noreferrer">Bandcamp</a>
-        <a href="https://sonokraft.lnk.to/HoldingTightLightly" target="_blank" rel="noreferrer">Holding Tight Lightly</a>
-        <a href="https://www.youtube.com/channel/UCPyQuCURbptinYXZKnuP1zA" target="_blank" rel="noreferrer">YouTube</a>
-        <a href="https://www.instagram.com/antonimusic_/" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://preview.mailerlite.io/preview/2242006/forms/183901895225509259?fresh=1/popup" target="_blank" rel="noreferrer">Newsletter Signup</a>
-      </nav>
+      <img class="cutout portrait-main ghost" src="closeup.jpg" alt="Antoni portrait in red light" />
+      <img class="cutout texture ghost" src="vinyl_back.png" alt="Abstract texture" />
+      <img class="cutout portrait-small ghost" src="Zeynep_Ozkanca.jpg" alt="Antoni monochrome portrait" />
 
-      <div class="trackblock">
-        <span class="title">Release</span>
-        Holding Tight Lightly<br />
-        Meteor Swarm<br />
-        Ascending Rivers<br />
-        Convoys<br />
-        The Lampion's Shadows Swing<br />
-        Where Do I Begin<br />
-        Made Up of Words<br />
-        Thin Ribbon<br />
-        Fossil<br />
-        Morning Song<br />
-        Shallow Banks<br />
-        Judith
+      
+
+      
+
+      <a href="https://preview.mailerlite.io/preview/2242006/forms/183901895225509259?fresh=1/popup" target="_blank" rel="noreferrer" class="cutout newsletter-tab ghost">
+        <img src="newsletter.jpg" alt="Newsletter handwritten tab" />
+      </a>
+
+      <div class="contact-block">
+        <img class="contact-tab ghost" src="contact.jpg" alt="Contact handwritten heading" />
+        <div class="row">Label - <a href="https://www.listenrecords-shop.com/produkte" target="_blank" rel="noreferrer">Listenrecords</a></div>
+        <div class="row">Booking - <a href="https://cabinartists.com/" target="_blank" rel="noreferrer">Cabin Artists</a></div>
+        <div class="row">Publisher - <a href="https://www.kicktheflame.de/de" target="_blank" rel="noreferrer">Kick The Flame</a></div>
       </div>
     </section>
 
-    <div class="footer-note">replace image positions, sizes and links directly in this file for your github pages version.</div>
+    <div class="footer-note">if the white paper edges of the tabs show too much, remove the background in a png editor and replace the jpg files later.</div>
   </main>
 </body>
 </html>
