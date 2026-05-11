@@ -43,18 +43,12 @@
       height: auto;
     }
 
-    /* ===================== */
-    /* PAGE LAYOUT */
-    /* ===================== */
     .page {
       padding: 2rem 2.5rem 3rem;
       max-width: 1400px;
       margin: 0 auto;
     }
 
-    /* ===================== */
-    /* HEADER */
-    /* ===================== */
     .header {
       display: flex;
       justify-content: space-between;
@@ -64,14 +58,14 @@
 
     .logo-text {
       font-size: 2.3rem;
-      font-weight: 400; /* nicht fett */
+      font-weight: 400;
       letter-spacing: 0.04em;
       line-height: 1;
     }
 
     .menu {
       text-align: right;
-      font-size: 1.1rem; /* größer */
+      font-size: 1.1rem;
       line-height: 1.5;
     }
 
@@ -79,9 +73,6 @@
       margin-bottom: 0.08rem;
     }
 
-    /* ===================== */
-    /* IMAGES */
-    /* ===================== */
     .cover {
       margin-top: 0.4rem;
       margin-bottom: 1rem;
@@ -101,9 +92,20 @@
       opacity: 0.9;
     }
 
-    /* ===================== */
-    /* CONTACT */
-    /* ===================== */
+    .live-block {
+      text-align: center;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .live-title {
+      margin-bottom: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
     .contact-block {
       text-align: center;
       font-size: 0.95rem;
@@ -121,9 +123,6 @@
       margin-bottom: 0.3rem;
     }
 
-    /* ===================== */
-    /* MOBILE */
-    /* ===================== */
     @media (max-width: 700px) {
       .page {
         padding: 1rem 1rem 2rem;
@@ -142,6 +141,11 @@
       .logo-text {
         font-size: 1.8rem;
       }
+
+      .live-block,
+      .contact-block {
+        text-align: left;
+      }
     }
   </style>
 </head>
@@ -149,7 +153,6 @@
 <body>
   <main class="page">
 
-    <!-- HEADER -->
     <div class="header">
       <div class="logo-text">ANTONÍ</div>
 
@@ -177,13 +180,21 @@
       </div>
     </div>
 
-    <!-- COVER -->
     <img class="cover" src="Albumcover_Zeynep_Ozkanca.jpg" alt="Album Cover" />
 
-    <!-- VINYL -->
     <img class="vinyl" src="vinyl_back.png" alt="Vinyl back" />
 
-    <!-- CONTACT -->
+    <div class="live-block">
+      <div class="live-title">Live</div>
+      <div class="row">26.04. Radio Corax</div>
+      <div class="row">07.05. Hannover, Feinkost Lampe</div>
+      <div class="row">09.06. Stuttgart, Cafe Galao</div>
+      <div class="row">03.07. TFF Rudolstadt Festival</div>
+      <div class="row">31.07. L*abore Festival</div>
+      <div class="row">01.08. Keine Fische Aber Grethen Festival</div>
+      <div class="row">16.09. Reeperbahn Festival</div>
+    </div>
+
     <div class="contact-block">
       <div class="contact-title">Contact</div>
 
