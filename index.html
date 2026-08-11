@@ -43,11 +43,19 @@
       height: auto;
     }
 
+    /* ===================== */
+    /* PAGE LAYOUT */
+    /* ===================== */
+
     .page {
       padding: 2rem 2.5rem 3rem;
       max-width: 1400px;
       margin: 0 auto;
     }
+
+    /* ===================== */
+    /* HEADER */
+    /* ===================== */
 
     .header {
       display: flex;
@@ -56,13 +64,14 @@
       margin-bottom: 1.5rem;
     }
 
-    .logo-text {
-      font-size: 2.3rem;
-      font-weight: 400;
-      letter-spacing: 0.04em;
-      line-height: 1;
+    /* Neues transparentes ANTONÍ-Logo */
+    .logo-image {
+      width: 150px;
+      height: auto;
+      flex-shrink: 0;
     }
 
+    /* Menü oben rechts */
     .menu {
       text-align: right;
       font-size: 1.1rem;
@@ -72,6 +81,10 @@
     .menu div {
       margin-bottom: 0.08rem;
     }
+
+    /* ===================== */
+    /* IMAGES */
+    /* ===================== */
 
     .cover {
       margin-top: 0.4rem;
@@ -92,6 +105,10 @@
       opacity: 0.9;
     }
 
+    /* ===================== */
+    /* LIVE DATES */
+    /* ===================== */
+
     .live-block {
       text-align: center;
       font-size: 0.95rem;
@@ -105,6 +122,10 @@
       font-weight: 700;
       letter-spacing: 0.06em;
     }
+
+    /* ===================== */
+    /* CONTACT */
+    /* ===================== */
 
     .contact-block {
       text-align: center;
@@ -123,6 +144,10 @@
       margin-bottom: 0.3rem;
     }
 
+    /* ===================== */
+    /* MOBILE */
+    /* ===================== */
+
     @media (max-width: 700px) {
       .page {
         padding: 1rem 1rem 2rem;
@@ -133,13 +158,13 @@
         gap: 1rem;
       }
 
+      .logo-image {
+        width: 130px;
+      }
+
       .menu {
         text-align: left;
         font-size: 1rem;
-      }
-
-      .logo-text {
-        font-size: 1.8rem;
       }
 
       .live-block,
@@ -153,101 +178,180 @@
 <body>
   <main class="page">
 
-    <div class="header">
-      <div class="logo-text">ANTONÍ</div>
+    <!-- ===================== -->
+    <!-- HEADER -->
+    <!-- ===================== -->
 
+    <div class="header">
+
+      <!-- Transparentes ANTONÍ-Logo -->
+      <img
+        class="logo-image"
+        src="logo_2026_transp.PNG"
+        alt="ANTONÍ"
+      />
+
+      <!-- Navigation oben rechts -->
       <div class="menu">
+
         <div>
-          <a href="https://sono.promo/holding-tight" target="_blank" rel="noreferrer">
+          <a
+            href="https://sono.promo/holding-tight"
+            target="_blank"
+            rel="noreferrer"
+          >
             Holding Tight Lightly
           </a>
         </div>
+
         <div>
-          <a href="https://antoni-music.bandcamp.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://antoni-music.bandcamp.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
             Bandcamp
           </a>
         </div>
+
         <div>
-          <a href="https://www.youtube.com/channel/UCPyQuCURbptinYXZKnuP1zA" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.youtube.com/channel/UCPyQuCURbptinYXZKnuP1zA"
+            target="_blank"
+            rel="noreferrer"
+          >
             Videos
           </a>
         </div>
+
         <div>
-          <a href="https://preview.mailerlite.io/preview/2242006/forms/183901895225509259?fresh=1/popup" target="_blank" rel="noreferrer">
+          <a
+            href="https://preview.mailerlite.io/preview/2242006/forms/183901895225509259?fresh=1/popup"
+            target="_blank"
+            rel="noreferrer"
+          >
             Newsletter
           </a>
         </div>
+
       </div>
     </div>
 
-    <img class="cover" src="Albumcover_Zeynep_Ozkanca.jpg" alt="Album Cover" />
+    <!-- ===================== -->
+    <!-- ALBUM COVER -->
+    <!-- ===================== -->
 
-    <img class="vinyl" src="vinyl_back.png" alt="Vinyl back" />
+    <img
+      class="cover"
+      src="Albumcover_Zeynep_Ozkanca.jpg"
+      alt="Album Cover"
+    />
+
+    <!-- ===================== -->
+    <!-- VINYL BACK -->
+    <!-- ===================== -->
+
+    <img
+      class="vinyl"
+      src="vinyl_back.png"
+      alt="Vinyl back"
+    />
+
+    <!-- ===================== -->
+    <!-- LIVE -->
+    <!-- ===================== -->
 
     <div class="live-block">
-  <div class="live-title">Live</div>
 
-  <div class="row">
-    09.06.
-    <a href="https://www.galao-stuttgart.de/konzerte" target="_blank" rel="noreferrer">
-      Stuttgart, Cafe Galao
-    </a>
-  </div>
+      <div class="live-title">Live</div>
 
-  <div class="row">
-    04.07.
-    <a href="https://www.rudolstadt-festival.de/startseite.html" target="_blank" rel="noreferrer">
-      TFF Rudolstadt Festival
-    </a>
-  </div>
+      <div class="row">
+        16.09.
+        <a
+          href="https://www.reeperbahnfestival.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Reeperbahn Festival
+        </a>
+      </div>
 
-  <div class="row">
-    31.07.
-    <a href="https://www.borwaerk.org/" target="_blank" rel="noreferrer">
-      L*abore Festival
-    </a>
-  </div>
+      <div class="row">
+        20.09.
+        <a
+          href="https://www.eventbrite.com/e/1995682261366"
+          target="_blank"
+          rel="noreferrer"
+        >
+          London - Theatreship
+        </a>
+      </div>
 
-  <div class="row">
-    01.08.
-    <a href="https://www.grethen.org/" target="_blank" rel="noreferrer">
-      Keine Fische Aber Grethen Festival
-    </a>
-  </div>
+      <div class="row">
+        24.09.
+        <a
+          href="https://cobaltstudios.co.uk/events/fresh-thursday-la-tene-antoni/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Newcastle - Cobalt Studios
+        </a>
+      </div>
 
-  <div class="row">
-    16.09.
-    <a href="https://www.reeperbahnfestival.com/" target="_blank" rel="noreferrer">
-      Reeperbahn Festival
-    </a>
-  </div>
-</div>
+      <div class="row">
+        02.10.
+        <a
+          href="https://dice.fm/event/eoywrw-my-ugly-clementine-anton-2nd-oct-popup-paris-tickets?lng=de"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Paris - POP UP! (supp. "My Ugly Clementine")
+        </a>
+      </div>
 
-  
+    </div>
+
+    <!-- ===================== -->
+    <!-- CONTACT -->
+    <!-- ===================== -->
 
     <div class="contact-block">
+
       <div class="contact-title">Contact</div>
 
       <div class="row">
         Label:
-        <a href="https://www.listenrecords-shop.com/produkte" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.listenrecords-shop.com/produkte"
+          target="_blank"
+          rel="noreferrer"
+        >
           Listenrecords
         </a>
       </div>
 
       <div class="row">
         Booking Agency:
-        <a href="https://cabinartists.com/" target="_blank" rel="noreferrer">
+        <a
+          href="https://cabinartists.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           Cabin Artists
         </a>
       </div>
 
       <div class="row">
         Publisher:
-        <a href="https://www.kicktheflame.de/de" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.kicktheflame.de/de"
+          target="_blank"
+          rel="noreferrer"
+        >
           Kick The Flame
         </a>
       </div>
+
     </div>
 
   </main>
